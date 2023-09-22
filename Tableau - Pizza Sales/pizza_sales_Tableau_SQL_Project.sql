@@ -93,7 +93,7 @@ GROUP BY order_quarter_number, order_year
 ORDER BY order_quarter_number, order_year ASC;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q7. What is the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza category */
+/* Q7. What are the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza category */
 SELECT pizza_category,
     COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -104,7 +104,7 @@ GROUP BY pizza_category
 ORDER BY percent_pizza_sales DESC;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q8. What is the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza size */
+/* Q8. What are the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza size */
 SELECT pizza_size,
     COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -115,7 +115,7 @@ GROUP BY pizza_size
 ORDER BY percent_pizza_sales DESC;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q9. What is the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza category & pizza size */
+/* Q9. What are the total orders, total quantity sold, total revenue generated & percentage of pizza sales by pizza category & pizza size */
 SELECT pizza_category,
 	pizza_size,
     COUNT(DISTINCT(order_id)) AS total_orders_placed,
@@ -139,7 +139,7 @@ FROM pizzasales
 WHERE MONTH(STR_TO_DATE(order_date,'%d-%m-%Y')) = 1
 GROUP BY pizza_category;
 
-/* Q10. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - Top 5 by total revenue */
+/* Q10. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - Top 5 by total revenue */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -149,7 +149,7 @@ GROUP BY pizza_name
 ORDER BY total_revenue DESC LIMIT 5;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q11. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by total revenue */
+/* Q11. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by total revenue */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -159,7 +159,7 @@ GROUP BY pizza_name
 ORDER BY total_revenue ASC LIMIT 5;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q12. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - Top 5 by quantity sold */
+/* Q12. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - Top 5 by quantity sold */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -169,7 +169,7 @@ GROUP BY pizza_name
 ORDER BY total_pizza_sold DESC LIMIT 5;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q13. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by quantity sold */
+/* Q13. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by quantity sold */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -179,7 +179,7 @@ GROUP BY pizza_name
 ORDER BY total_pizza_sold ASC LIMIT 5;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q14. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - TOP 5 by orders placed */
+/* Q14. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - TOP 5 by orders placed */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
@@ -189,7 +189,7 @@ GROUP BY pizza_name
 ORDER BY total_orders_placed DESC LIMIT 5;
 -- ANSWER -- exported to a MICROSOFT WORD file with name "Pizza_Sales_MySQL_Query_results.docx"
 
-/* Q15. What is the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by orders placed */
+/* Q15. What are the total orders, total quantity sold, total revenue generated categorized by pizza name - Bottom 5 by orders placed */
 SELECT pizza_name,
 	COUNT(DISTINCT(order_id)) AS total_orders_placed,
     SUM(quantity) AS total_pizza_sold,
